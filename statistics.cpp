@@ -12,13 +12,13 @@
 
 int main() {
 
-    double val = 0;//TODO not very nice, don't want get first val separately
+    double val = 0; // TODO not very nice, don't want get first val separately
     std::cin >> val;
-    IStatistics* statistics[] = {
-        new Min{val},    new Max{val},       new Mean{val},
-        new StdDev{val}, new CPctN{val, 90}, new CPctN{val, 95}};
+    IStatistics* statistics[] = {new Min{val},       new Max{val},
+                                 new Mean{val},      new StdDev{val},
+                                 new CPctN{val, 90}, new CPctN{val, 95}};
 
-    const size_t statistics_count = sizeof(statistics)/sizeof(*statistics);
+    const size_t statistics_count = sizeof(statistics) / sizeof(*statistics);
 
     while (std::cin >> val) {
         for (size_t i = 0; i < statistics_count; ++i) {

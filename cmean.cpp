@@ -1,7 +1,6 @@
-#pragma once
 #include "cmean.h"
 #include "istatistics.h"
-Mean::Mean(double m_val) : m_mean{m_val}, m_summ{m_val}, m_n{1} {}
+Mean::Mean(double m_val) : m_mean{m_val}, m_summ{m_val}, m_n{1} {} //TODO not very nice - strange "1"...
 
 void Mean::update(double next) {
     m_summ += next;

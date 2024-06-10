@@ -1,4 +1,3 @@
-#pragma once
 #include "cmax.h"
 #include "istatistics.h"
 
